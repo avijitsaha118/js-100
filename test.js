@@ -105,7 +105,7 @@
 // for (let i = 0; i < numbers.length; i++) {
 //   for (let j = i + 1; j < numbers.length; j++) {
 //     if (numbers[i] + numbers[j] === target) {
-//       console.log(numbers[i], numbers[j]); // Output: 2 7
+//       console.log(numbers[i], numbers[j]);
 //     }
 //   }
 // }
@@ -265,36 +265,6 @@
 // incrementReactionCount("_2", "haha"); // Incremented haha reaction count for post p456
 
 // console.log(posts);
-/*
-  [
-    {
-      id: "p123",
-      author: "John Smith",
-      content: "Check out this beautiful sunset!",
-      reactions: {
-        like: 51,
-        love: 20,
-        haha: 5,
-        wow: 2,
-        sad: 1,
-        angry: 0,
-      },
-    },
-    {
-      id: "p456",
-      author: "Jane Doe",
-      content: "Just finished my first marathon!",
-      reactions: {
-        like: 100,
-        love: 75,
-        haha: 11,
-        wow: 3,
-        sad: 0,
-        angry: 1,
-      },
-    },
-  ]
-  */
 
 /* Real world example about Target value problem: Suppose you are developing an e-commerce website that allows customers to purchase products. You want to implement
 a feature that suggests related products to customers based on their previous purchases.
@@ -552,16 +522,95 @@ You could represent the list of books as an array of objects, where each object 
 
 // Relevant Example 1: Formatting data for display
 
-const users = [
-  { id: 1, name: "John", email: "john@example.com", age: 25 },
-  { id: 2, name: "Jane", email: "jane@example.com", age: 30 },
-  { id: 3, name: "Bob", email: "bob@example.com", age: 40 },
-];
+// const users = [
+//   { id: 1, name: "John", email: "john@example.com", age: 25 },
+//   { id: 2, name: "Jane", email: "jane@example.com", age: 30 },
+//   { id: 3, name: "Bob", email: "bob@example.com", age: 40 },
+// ];
 
-const userTableData = users.map((user) => ({
-  name: user.name,
-  email: user.email,
-  age: user.age,
-}));
+// const userTableData = users.map((user) => ({
+//   name: user.name,
+//   email: user.email,
+//   age: user.age,
+// }));
 
-console.log(userTableData);
+// console.log(userTableData);
+
+//object related problem
+
+//problem-21: Converting an object to an array
+
+// const obj = { name: "Albert", age: 30 };
+
+// const arr = Object.entries(obj);
+
+// console.log(arr);
+
+// Problem- 22: Merging two objects
+
+// const obj1 = { name: "Avijit Saha", phone: 3000001 };
+// const obj2 = { address: "Dhaka" };
+
+// const newObj = Object.assign({}, obj1, obj2);
+
+// console.log(newObj);
+
+// Problem-23: A user profile object might include properties like name, email, username, password, avatar, bio, location, website, and socialMediaLinks. Show the the user's name and location to the console.
+
+// const userProfile = {
+//   name: 'Avijit',
+//   email: 'avijitsaha.js@gmail.com',
+//   username: 'avi',
+//   password: 'password123',
+//   avatar: 'https://example.com/avatar.png',
+//   bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+//   location: 'Dhaka, Bangladesh',
+//   website: 'https://example.com',
+//   socialMediaLinks: {
+//     twitter: 'https://twitter.com/avi',
+//     instagram: 'https://instagram.com/avi',
+//     facebook: 'https://facebook.com/avi',
+//   },
+// };
+
+// function nameAndLocation(user) {
+//   console.log(`Name: ${user.name}`);
+//   console.log(`Location: ${user.location}`);
+// }
+
+// nameAndLocation(userProfile);
+
+//problem-24: Problem-24: [Note: Prototypes are a fundamental concept in JavaScript. A programmer should understand how prototypes work and how to use them to create inheritance relationships between objects.]
+// Now, create an object with a specific prototype is to use the Object.create()
+
+// const person = {
+//   name: "Java",
+//   sayHello() {
+//     console.log(`Hello, my name is ${this.name}.`);
+//   },
+// };
+
+// const student = Object.create(person);
+// student.name = "JavaScript";
+// student.major = "Object";
+
+// console.log(student.name);
+// student.sayHello();
+
+// Here another way to create an object with a specific prototype is to use the constructor function and the new operator:
+
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.sayHello = function () {
+//   console.log(`Hello, my name is ${this.name}.`);
+// };
+
+// const js = new Person("JavaScript");
+// const python = new Person("Python");
+
+// console.log(js.name);
+// js.sayHello();
+// console.log(python.name);
+// python.sayHello();
